@@ -8,9 +8,7 @@ import saved from './GPT ASSETS/bookmark.svg';
 import rocket from './GPT ASSETS/rocket.svg';
 import sendBtn from './GPT ASSETS/send.svg';
 import userIcon from './GPT ASSETS/user-icon.png';
-import gptImgLogo from './GPT ASSETS/chatgptLogo.svg'
-
-
+import gptImgLogo from './GPT ASSETS/chatgptLogo.svg';
 
 function App() {
   return (
@@ -40,7 +38,7 @@ function App() {
         </div>
 
         <div className="lowerSide">
-          <div className="listItem">
+          <div className="listItems">
             <img src={home} alt="Home" className="listItemsImg" />
             Home
           </div>
@@ -58,17 +56,23 @@ function App() {
       <div className="main">
         <div className='chats'>
           <div className='chat'>
-            <img src='' alt='' /><p className='txt'></p>
+            <img className="chatImg" src={userIcon} alt='User' />
+            Hello I am User<p className='txt'></p>
+          </div>
+          <div className='chat'>
+            <img className="chatImg" src={gptImgLogo} alt='GPT' />
+            Hi I am GPT<p className='txt'></p>
           </div>
         </div>
+
         <div className='chatFooter'>
           <div className='inp'>
-            <input type="text" placeholder='Send a message'/><button className='send'></button>
+            <input type="text" placeholder='Send a message' />
+            <button className='send'><img src={sendBtn} alt="Send"/></button>
           </div>
         </div>
       </div>
     </div>
   );
 }
-
 export default App;
